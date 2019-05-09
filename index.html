@@ -37,6 +37,12 @@
           <th>Telefone</th>
           <th>Operadora</th>
         </tr>
+        <tr ng-repeat="contact in contacts">
+          <td><input type="checkbox"></td>
+          <td>{{contact.nome}}</td>
+          <td>{{contact.telefone}}</td>
+          <td>{{contact.codigo}}</td>
+        </tr>
       </table>
     </div>
   </body>
