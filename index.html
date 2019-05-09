@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular by Marcel</title>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.css" type="text/css" />
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
+    
+    <!-- AngularJS-->
+    <script type="text/javascript" src="./lib/angularjs/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Folha de Estilos-->
+    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+    
+    <!-- Controllers -->
+    <script type="text/javascript" src="./controllers/agenda_controller.js"></script>
+  
+  </head>
+  
+  <body ng-app="agenda" ng-controller="agendaCtrl">
+    <div class='jumbotron'>
+    <h1  ng-class="{giant: !name, small: name}">
+      Hello, 
+      <span ng-if="!name">World</span>
+      <span ng-if="name">{{name}}</span>
+      !
+    </h1>
+    <input type="text"class="form-control" ng-model="name" placeholder="Digite seu nome....">
+    </div>
+    <div class="table">
+      <h4 ng-bind="app"></h4>
+      <table class="table table-striped table-dark">
+        <tr>
+          <th></th>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Operadora</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  width: 45%;
+}
+
+.giant {
+  font-size: 122px;
+}
+.small-class {
+  font-size: 10px;
+}
