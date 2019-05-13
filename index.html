@@ -41,14 +41,18 @@
           <td><input type="checkbox" ng-model="contact.select"></td>
           <td>{{contact.nome}}</td>
           <td>{{contact.telefone}}</td>
-          <td>{{contact.codigo}}</td>
+          <td>{{findOperadora(contact.codigo)}}</td>
         </tr>
       </table>
       <input type="text" placeholder="Nome" ng-model="contact.nome" class='form-control'>
       <input type="text" placeholder="Telefone" ng-model="contact.telefone" class='form-control'>
+      <select class='form-control' ng-options="operadora.nome group by operadora.categoria for operadora in operadoras" ng-model="contact.codigo">
+        <option value="">Selecione um opção</option>
+      </select>
       <button class='btn btn-primary btn-block' ng-click="addContact(contact)">Adicionar Contato</button>
       <button class="btn btn-danger btn-block" ng-disabled="ifSelected(contacts)" ng-click="removeContact(contacts)">Apagar Contatos</button>
     </div>
+    {{contact}}
   </body>
 
 </html>
