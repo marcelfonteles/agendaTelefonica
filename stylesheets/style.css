@@ -10,3 +10,9 @@ body {
 .small-class {
   font-size: 10px;
 }
+.form-control {
+  margin-bottom: 5px;
+}
+table tr.selecionado {
+  background-color: #f48342;
+}

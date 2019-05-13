@@ -9,4 +9,18 @@ app.controller("agendaCtrl", ["$scope", function($scope) {
       {nome: "Guimarães Rosa", telefone: "+55 85 9 9999-8888", operadora: 15},
       {nome: "Jimmy Neutron", telefone: "+55 85 9 9999-8888", operadora: 21}
     ];
+  $scope.addContact = function(contact) {
+    $scope.contacts.push(angular.copy(contact));
+    delete $scope.contact;
+  };
+  $scope.ifSelected = function(contacts) {
+    return !contacts.some(function(contact) {
+      return contact.select;
+    });
+  };
+  $scope.removeContact = function(contacts) {
+    $scope.contacts = contacts.filter(function(contact) {
+      return !contact.select;
+    });
+  }; 
 }])
