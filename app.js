@@ -1,1 +1,4 @@
-var app = angular.module("agenda", []);
+var app = angular.module("agenda", [
+                                  "ngResource",
+                                  "ngRoute"
+                                  ]);
