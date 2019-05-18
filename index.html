@@ -25,41 +25,7 @@
   
   <body ng-app="agenda" ng-controller="agendaCtrl">
     <div ng-view>
-      <div class='jumbotron'>
-    <h1>
-      Hello, 
-      <span ng-if="!name">World</span>
-      <span ng-if="name">{{name}}</span>
-      !
-    </h1>
-    <input type="text"class="form-control" ng-model="name" placeholder="Digite seu nome....">
+     
     </div>
-    <div class="table">
-      <h4 ng-bind="app"></h4>
-      <table class="table table-dark">
-        <tr>
-          <th></th>
-          <th>Nome</th>
-          <th>Telefone</th>
-          <th>Operadora</th>
-        </tr>
-        <tr ng-repeat="contact in contacts" ng-class="{selecionado: contact.select}">
-          <td><input type="checkbox" ng-model="contact.select"></td>
-          <td>{{contact.nome}}</td>
-          <td>{{contact.telefone}}</td>
-          <td>{{findOperadora(contact.codigo)}}</td>
-        </tr>
-      </table>
-      <input type="text" placeholder="Nome" ng-model="contact.nome" class='form-control'>
-      <input type="text" placeholder="Telefone" ng-model="contact.telefone" class='form-control'>
-      <select class='form-control' ng-options="operadora.nome group by operadora.categoria for operadora in operadoras" ng-model="contact.codigo">
-        <option value="">Selecione um opção</option>
-      </select>
-      <button class='btn btn-primary btn-block' ng-click="addContact(contact)">Adicionar Contato</button>
-      <button class="btn btn-danger btn-block" ng-disabled="ifSelected(contacts)" ng-click="removeContact(contacts)">Apagar Contatos</button>
-  </div>
-    </div>
-
   </body>
-
 </html>
