@@ -12,6 +12,9 @@ app.config(function(
         //template: "<h1>Hello World</h1>"
         templateUrl: "templates/inicio.html"
       }).
+      when("/helloworld", {
+        template: "<h1>Hello World!</h1>"
+      }).
       otherwise({
         template:"<h1>Not Found</h1>"
       });
