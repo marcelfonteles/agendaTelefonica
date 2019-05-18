@@ -10,7 +10,7 @@ app.config(function(
     $routeProvider.
       when("/", {
         //template: "<h1>Hello World</h1>"
-        //templateUrl: "templates/inicio.html"
+        templateUrl: "templates/inicio.html"
       }).
       when("/helloworld", {
         template: "<h1>Hello World!</h1>"
